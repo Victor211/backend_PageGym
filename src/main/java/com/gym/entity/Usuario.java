@@ -61,4 +61,93 @@ public class Usuario {
     // Relación con pagos
     @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Pago> pagos;
+    
+    // Getters y setters manuales para asegurar compatibilidad
+    public Integer getIdUsuarios() {
+        return idUsuarios;
+    }
+    
+    public void setIdUsuarios(Integer idUsuarios) {
+        this.idUsuarios = idUsuarios;
+    }
+    
+    public String getNombres() {
+        return nombres;
+    }
+    
+    public void setNombres(String nombres) {
+        this.nombres = nombres;
+    }
+    
+    public String getEmail() {
+        return email;
+    }
+    
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    
+    public String getApellidos() {
+        return apellidos;
+    }
+    
+    public void setApellidos(String apellidos) {
+        this.apellidos = apellidos;
+    }
+    
+    public String getPasswordHash() {
+        return passwordHash;
+    }
+    
+    public void setPasswordHash(String passwordHash) {
+        this.passwordHash = passwordHash;
+    }
+    
+    public LocalDateTime getFechaCreacion() {
+        return fechaCreacion;
+    }
+    
+    public void setFechaCreacion(LocalDateTime fechaCreacion) {
+        this.fechaCreacion = fechaCreacion;
+    }
+    
+    public LocalDateTime getFechaModificacion() {
+        return fechaModificacion;
+    }
+    
+    public void setFechaModificacion(LocalDateTime fechaModificacion) {
+        this.fechaModificacion = fechaModificacion;
+    }
+    
+    public Rol getRol() {
+        return rol;
+    }
+    
+    public void setRol(Rol rol) {
+        this.rol = rol;
+    }
+    
+    public Membresia getMembresia() {
+        return membresia;
+    }
+    
+    public void setMembresia(Membresia membresia) {
+        this.membresia = membresia;
+    }
+    
+    public List<Asistencia> getAsistencias() {
+        return asistencias;
+    }
+    
+    public void setAsistencias(List<Asistencia> asistencias) {
+        this.asistencias = asistencias;
+    }
+    
+    public List<Pago> getPagos() {
+        return pagos;
+    }
+    
+    public void setPagos(List<Pago> pagos) {
+        this.pagos = pagos;
+    }
 }

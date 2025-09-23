@@ -36,4 +36,53 @@ public class Membresia {
     // Relación con pagos
     @OneToMany(mappedBy = "membresia", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Pago> pagos;
+    
+    // Getters y setters manuales para asegurar compatibilidad
+    public Integer getIdMembresias() {
+        return idMembresias;
+    }
+    
+    public void setIdMembresias(Integer idMembresias) {
+        this.idMembresias = idMembresias;
+    }
+    
+    public String getDescMembresia() {
+        return descMembresia;
+    }
+    
+    public void setDescMembresia(String descMembresia) {
+        this.descMembresia = descMembresia;
+    }
+    
+    public BigDecimal getPrecio() {
+        return precio;
+    }
+    
+    public void setPrecio(BigDecimal precio) {
+        this.precio = precio;
+    }
+    
+    public Integer getDuracionDias() {
+        return duracionDias;
+    }
+    
+    public void setDuracionDias(Integer duracionDias) {
+        this.duracionDias = duracionDias;
+    }
+    
+    public List<Usuario> getUsuarios() {
+        return usuarios;
+    }
+    
+    public void setUsuarios(List<Usuario> usuarios) {
+        this.usuarios = usuarios;
+    }
+    
+    public List<Pago> getPagos() {
+        return pagos;
+    }
+    
+    public void setPagos(List<Pago> pagos) {
+        this.pagos = pagos;
+    }
 }

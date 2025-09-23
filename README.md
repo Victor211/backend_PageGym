@@ -71,7 +71,7 @@ La aplicación estará disponible en: `http://localhost:8080/api`
 ## 📚 Documentación de la API
 
 ### Swagger UI
-Accede a la documentación interactiva en: `http://localhost:8080/swagger-ui.html`
+Accede a la documentación interactiva en: `http://localhost:8080/api/swagger-ui.html`
 
 ### Usuarios por Defecto
 

@@ -41,4 +41,53 @@ public class Rol {
     // Relación con usuarios
     @OneToMany(mappedBy = "rol", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Usuario> usuarios;
+    
+    // Getters y setters manuales para asegurar compatibilidad
+    public Integer getIdRoles() {
+        return idRoles;
+    }
+    
+    public void setIdRoles(Integer idRoles) {
+        this.idRoles = idRoles;
+    }
+    
+    public String getDescRol() {
+        return descRol;
+    }
+    
+    public void setDescRol(String descRol) {
+        this.descRol = descRol;
+    }
+    
+    public Integer getEstado() {
+        return estado;
+    }
+    
+    public void setEstado(Integer estado) {
+        this.estado = estado;
+    }
+    
+    public LocalDateTime getFechaCreacion() {
+        return fechaCreacion;
+    }
+    
+    public void setFechaCreacion(LocalDateTime fechaCreacion) {
+        this.fechaCreacion = fechaCreacion;
+    }
+    
+    public LocalDateTime getFechaModificacion() {
+        return fechaModificacion;
+    }
+    
+    public void setFechaModificacion(LocalDateTime fechaModificacion) {
+        this.fechaModificacion = fechaModificacion;
+    }
+    
+    public List<Usuario> getUsuarios() {
+        return usuarios;
+    }
+    
+    public void setUsuarios(List<Usuario> usuarios) {
+        this.usuarios = usuarios;
+    }
 }

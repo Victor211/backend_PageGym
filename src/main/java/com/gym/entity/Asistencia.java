@@ -29,4 +29,37 @@ public class Asistencia {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "USUARIOS_idUSUARIOS", nullable = false)
     private Usuario usuario;
+    
+    // Getters y setters manuales para asegurar compatibilidad
+    public Integer getIdAsistencias() {
+        return idAsistencias;
+    }
+    
+    public void setIdAsistencias(Integer idAsistencias) {
+        this.idAsistencias = idAsistencias;
+    }
+    
+    public LocalDateTime getFechaHoraEntrada() {
+        return fechaHoraEntrada;
+    }
+    
+    public void setFechaHoraEntrada(LocalDateTime fechaHoraEntrada) {
+        this.fechaHoraEntrada = fechaHoraEntrada;
+    }
+    
+    public LocalDateTime getFechaHoraSalida() {
+        return fechaHoraSalida;
+    }
+    
+    public void setFechaHoraSalida(LocalDateTime fechaHoraSalida) {
+        this.fechaHoraSalida = fechaHoraSalida;
+    }
+    
+    public Usuario getUsuario() {
+        return usuario;
+    }
+    
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
 }

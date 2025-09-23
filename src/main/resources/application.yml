@@ -8,10 +8,10 @@ spring:
     name: gym-management
   
   datasource:
-    url: jdbc:mysql://localhost:3306/gym_db?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://localhost:3306/gympage?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
     username: root
-    password: password
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: 
+    # Removido driver-class-name para auto-configuración
   
   jpa:
     hibernate:
@@ -21,15 +21,15 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.MySQLDialect
         format_sql: true
+    defer-datasource-initialization: true
   
-  security:
-    user:
-      name: admin
-      password: admin123
+  sql:
+    init:
+      mode: never # Deshabilitar data.sql para usar DataInitializer
 
 # JWT Configuration
 jwt:
-  secret: mySecretKey123456789012345678901234567890
+  secret: mySecretKeyForGymManagementSystemThatIsSecureEnoughForHS512Algorithm2024
   expiration: 86400000 # 24 hours in milliseconds
 
 # Swagger Configuration
@@ -43,8 +43,8 @@ springdoc:
 # Logging
 logging:
   level:
-    com.gym: DEBUG
-    org.springframework.security: DEBUG
+    com.gym: INFO
+    org.springframework.security: INFO
     org.hibernate.SQL: DEBUG
   pattern:
     console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"

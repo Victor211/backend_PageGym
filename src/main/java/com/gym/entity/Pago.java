@@ -37,4 +37,53 @@ public class Pago {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "MEMBRESIAS_idMEMBRESIAS", nullable = false)
     private Membresia membresia;
+    
+    // Getters y setters manuales para asegurar compatibilidad
+    public Integer getIdPagos() {
+        return idPagos;
+    }
+    
+    public void setIdPagos(Integer idPagos) {
+        this.idPagos = idPagos;
+    }
+    
+    public LocalDateTime getFechaPago() {
+        return fechaPago;
+    }
+    
+    public void setFechaPago(LocalDateTime fechaPago) {
+        this.fechaPago = fechaPago;
+    }
+    
+    public String getMetodoPago() {
+        return metodoPago;
+    }
+    
+    public void setMetodoPago(String metodoPago) {
+        this.metodoPago = metodoPago;
+    }
+    
+    public String getEstado() {
+        return estado;
+    }
+    
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+    
+    public Usuario getUsuario() {
+        return usuario;
+    }
+    
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+    
+    public Membresia getMembresia() {
+        return membresia;
+    }
+    
+    public void setMembresia(Membresia membresia) {
+        this.membresia = membresia;
+    }
 }

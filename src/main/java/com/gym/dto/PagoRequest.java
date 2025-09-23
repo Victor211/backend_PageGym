@@ -19,4 +19,29 @@ public class PagoRequest {
     
     @NotBlank(message = "El método de pago es obligatorio")
     private String metodoPago;
+    
+    // Getters y setters manuales para asegurar compatibilidad
+    public Integer getUsuarioId() {
+        return usuarioId;
+    }
+    
+    public void setUsuarioId(Integer usuarioId) {
+        this.usuarioId = usuarioId;
+    }
+    
+    public Integer getMembresiaId() {
+        return membresiaId;
+    }
+    
+    public void setMembresiaId(Integer membresiaId) {
+        this.membresiaId = membresiaId;
+    }
+    
+    public String getMetodoPago() {
+        return metodoPago;
+    }
+    
+    public void setMetodoPago(String metodoPago) {
+        this.metodoPago = metodoPago;
+    }
 }

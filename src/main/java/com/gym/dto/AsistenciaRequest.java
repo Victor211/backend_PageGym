@@ -14,4 +14,21 @@ public class AsistenciaRequest {
     private Integer usuarioId;
     
     private String accion; // "ENTRADA" o "SALIDA"
+    
+    // Getters y setters manuales para asegurar compatibilidad
+    public Integer getUsuarioId() {
+        return usuarioId;
+    }
+    
+    public void setUsuarioId(Integer usuarioId) {
+        this.usuarioId = usuarioId;
+    }
+    
+    public String getAccion() {
+        return accion;
+    }
+    
+    public void setAccion(String accion) {
+        this.accion = accion;
+    }
 }

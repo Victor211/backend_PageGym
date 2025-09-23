@@ -15,9 +15,9 @@ INSERT IGNORE INTO membresias (idMEMBRESIAS, desc_membresia, precio, duracion_di
 -- Insertar usuario administrador por defecto
 -- Contraseña: admin123 (encriptada con BCrypt)
 INSERT IGNORE INTO usuarios (idUSUARIOS, nombres, apellidos, email, password_hash, fecha_creacion, fecha_modificacion, ROLES_idROLES) VALUES
-(1, 'Administrador', 'Sistema', 'admin@gimnasio.com', '$2a$10$N.zmdr9k7uOCQb376NoUnuTJ8iYqiSfFVMLkxNqyNuVPNEeYjDJHu', NOW(), NOW(), 1);
+(1, 'Administrador', 'Sistema', 'admin@gimnasio.com', '$2a$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2uheWG/igi.', NOW(), NOW(), 1);
 
 -- Insertar usuario cliente de ejemplo
 -- Contraseña: cliente123 (encriptada con BCrypt)
 INSERT IGNORE INTO usuarios (idUSUARIOS, nombres, apellidos, email, password_hash, fecha_creacion, fecha_modificacion, ROLES_idROLES, MEMBRESIAS_idMEMBRESIAS) VALUES
-(2, 'Juan', 'Pérez', 'juan.perez@email.com', '$2a$10$8K1p/H9jd7F2LRvyBYgzaOQw5f5Kf5Kf5Kf5Kf5Kf5Kf5Kf5Kf5K', NOW(), NOW(), 2, 1);
+(2, 'Juan', 'Pérez', 'juan.perez@email.com', '$2a$10$VEjxo0jq2YNzZc.e92F3f.c1lxD4eC1uau4/TXuLeGU0xRI2k6YAa', NOW(), NOW(), 2, 1);
